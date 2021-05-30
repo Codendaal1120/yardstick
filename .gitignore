@@ -1,0 +1,8 @@
+Source/.vscode/
+Source/API/.vscode/
+Source/API/node_modules/
+Source/API/*.log
+Source/UI/.vscode/
+Source/UI/node_modules/
+Source/UI/*.log
+

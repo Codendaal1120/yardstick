@@ -1,0 +1,14 @@
+{
+    "appenders": {
+        "out": { "type": "stdout", "layout": { "type": "basic" } },
+        "console": { "type": "console", "layout": { "type": "basic" } },
+        "log": { "type": "file", "filename": "all-the-logs.log" }
+    },
+    "categories": { 
+        "default": { 
+            "appenders": ["out", "console", "log"], 
+            "level": "debug" 
+        }
+
+    }
+}

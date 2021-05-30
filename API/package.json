@@ -1,0 +1,23 @@
+{
+  "name": "yardstick.api",
+  "version": "1.0.0",
+  "description": "Test suite for testing and mocking aps",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "mock",
+    "api"
+  ],
+  "author": "Christiaan Odendaal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "log4js": "^6.3.0",
+    "mongodb": "^3.6.6"
+  },
+  "type": "commonjs"
+}
