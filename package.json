@@ -1,0 +1,23 @@
+{
+  "name": "yardstick",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm ci --prefix source/api",
+    "test": "npm test --prefix source/api",
+    "debug-api": "npm run start --prefix api",
+    "debug-ui": "npm run dev --prefix web"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codendaal1120/yardstick"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/Codendaal1120/yardstick/issues"
+  },
+  "homepage": "https://github.com/Codendaal1120/yardstick#readme"
+}

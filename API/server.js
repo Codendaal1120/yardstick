@@ -14,7 +14,7 @@ app.use(express.json());
 
 //Routers
 var r_mock = require("./app/routers/mock");
-var r_apis = require("./app/routers/api/apis");
+var r_apis = require("./app/routers/ys/apis.js");
 
 app.use(function (req, res, next) {
     // Website you wish to allow to connect
@@ -42,7 +42,7 @@ app.use("/api/version", function(req, res, next) {
 });
 
 app.use("/mock/*", r_mock);
-app.use("/api/apis", r_apis);
+app.use("/ys/api", r_apis);
 
 app.use("/time", function(req, res, next) {
     var dt = new Date();

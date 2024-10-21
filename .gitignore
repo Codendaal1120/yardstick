@@ -6,3 +6,6 @@ Source/UI/.vscode/
 Source/UI/node_modules/
 Source/UI/*.log
 
+api/node_modules/*
+ui/node_modules/*
+API/.env
