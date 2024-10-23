@@ -6,7 +6,7 @@
     },
     "categories": { 
         "default": { 
-            "appenders": ["out", "console", "log"], 
+            "appenders": ["out", "log"], 
             "level": "debug" 
         }
 

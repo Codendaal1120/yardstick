@@ -36,7 +36,7 @@ app.options("*", function (req, res) {
     res.status(200).send();
 });
 
-app.use("/api/version", function(req, res, next) {
+app.use("/ys/version", function(req, res, next) {
     var pjson = require('./package.json');
     res.status(200).send(pjson.version);
 });

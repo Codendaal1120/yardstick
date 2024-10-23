@@ -9,3 +9,4 @@ Source/UI/*.log
 api/node_modules/*
 ui/node_modules/*
 API/.env
+TODO.md

@@ -6,8 +6,7 @@
   "scripts": {
     "build": "npm ci --prefix source/api",
     "test": "npm test --prefix source/api",
-    "debug-api": "npm run start --prefix api",
-    "debug-ui": "npm run dev --prefix web"
+    "debug-api": "npm run start --prefix api"
   },
   "repository": {
     "type": "git",
