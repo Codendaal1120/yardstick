@@ -1606,3 +1606,952 @@
 [2024-10-23T08:14:36.219] [INFO] default - Server started on PORT:9802
 [2024-10-23T08:15:39.405] [INFO] default - Server started on PORT:9802
 [2024-10-23T08:15:54.507] [INFO] default - Server started on PORT:9802
+[2024-10-23T08:24:11.329] [INFO] default - Server started on PORT:9802
+[2024-10-23T08:24:58.668] [DEBUG] Apis - Get apis 
+[2024-10-23T08:25:28.163] [ERROR] default - Could not get apis : [object Object]
+[2024-10-23T09:35:26.185] [ERROR] default - Could not get apis : [object Object]
+[2024-10-23T09:35:36.202] [ERROR] default - Could not get apis : [object Object]
+[2024-10-23T09:36:36.371] [DEBUG] Apis - Get apis 
+[2024-10-23T09:45:38.353] [DEBUG] Apis - Get apis 
+[2024-10-23T09:46:56.555] [DEBUG] Apis - Get apis 
+[2024-10-23T09:47:03.281] [INFO] default - Server started on PORT:9802
+[2024-10-23T09:47:05.044] [DEBUG] Apis - Get apis 
+[2024-10-23T09:53:28.714] [INFO] default - Server started on PORT:9802
+[2024-10-23T09:54:03.155] [INFO] default - Server started on PORT:9802
+[2024-10-23T09:59:54.446] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:27:39.580] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:29:09.924] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:29:13.364] [INFO] default - saving endpoints
+[2024-10-23T10:30:33.458] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:30:35.038] [INFO] default - saving endpoints
+[2024-10-23T10:30:47.773] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:30:48.623] [INFO] default - saving endpoints
+[2024-10-23T10:31:12.554] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:31:13.822] [INFO] default - saving endpoints
+[2024-10-23T10:33:13.900] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:33:15.418] [INFO] default - saving endpoints
+[2024-10-23T10:33:35.313] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:33:36.257] [INFO] default - saving endpoints
+[2024-10-23T10:34:20.855] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:34:21.948] [INFO] default - saving endpoints
+[2024-10-23T10:34:38.436] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:34:49.647] [INFO] default - saving endpoints
+[2024-10-23T10:36:16.900] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:36:18.806] [INFO] default - saving endpoints
+[2024-10-23T10:37:10.316] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:37:11.709] [INFO] default - saving endpoints
+[2024-10-23T10:37:57.343] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:37:58.352] [INFO] default - saving endpoints
+[2024-10-23T10:38:36.743] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:38:37.929] [INFO] default - saving endpoints
+[2024-10-23T10:43:46.121] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:43:48.459] [INFO] default - saving endpoints
+[2024-10-23T10:44:14.354] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:44:15.129] [INFO] default - saving endpoints
+[2024-10-23T10:44:15.139] [ERROR] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 0,
+    nMatched: 1,
+    nModified: 1,
+    nRemoved: 0,
+    upserted: []
+  },
+  insertedCount: 0,
+  matchedCount: 1,
+  modifiedCount: 1,
+  deletedCount: 0,
+  upsertedCount: 0,
+  upsertedIds: {},
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T10:45:08.402] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:45:09.892] [INFO] default - saving endpoints
+[2024-10-23T10:47:49.794] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:47:56.119] [INFO] default - saving endpoints
+[2024-10-23T10:48:06.943] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:48:07.850] [INFO] default - saving endpoints
+[2024-10-23T10:48:07.860] [ERROR] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 1,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 1,
+  upsertedIds: { '0': '6718b847a3e1c229ff409f91' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T10:49:22.019] [INFO] default - saving endpoints
+[2024-10-23T10:49:22.025] [ERROR] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 1,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 1,
+  upsertedIds: { '0': '6718b892a3e1c229ff409f93' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T10:49:30.614] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:49:32.130] [INFO] default - saving endpoints
+[2024-10-23T10:50:31.178] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:50:32.614] [INFO] default - saving endpoints
+[2024-10-23T10:50:52.666] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:50:53.493] [INFO] default - saving endpoints
+[2024-10-23T10:52:38.826] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:52:39.790] [INFO] default - saving endpoints
+[2024-10-23T10:52:39.800] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 1,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 1,
+  upsertedIds: { '0': '6718b957874d2029637d2d22' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T10:56:02.524] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:56:04.379] [INFO] default - saving endpoints
+[2024-10-23T10:56:04.387] [DEBUG] default - { '0': '6718ba2418efd926d30b8a38' }
+[2024-10-23T10:57:10.453] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:57:11.717] [INFO] default - saving endpoints
+[2024-10-23T10:57:11.726] [DEBUG] default - { '0': '6718ba673991af2523044da6' }
+[2024-10-23T10:57:51.834] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:57:52.798] [INFO] default - saving endpoints
+[2024-10-23T10:57:52.808] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 1,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 1,
+  upsertedIds: { '0': '6718ba90b320de30930232ce' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T10:58:38.967] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:58:39.815] [INFO] default - saving endpoints
+[2024-10-23T10:58:39.825] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 1,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 1,
+  upsertedIds: { '0': '6718babfadb07236f3da17f0' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T10:59:26.305] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:59:27.115] [INFO] default - saving endpoints
+[2024-10-23T10:59:27.125] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 1,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 1,
+  upsertedIds: { '0': '6718baefe8486530076dae64' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T10:59:41.988] [INFO] default - Server started on PORT:9802
+[2024-10-23T10:59:42.606] [INFO] default - saving endpoints
+[2024-10-23T10:59:42.617] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 1,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 1,
+  upsertedIds: { '0': '6718bafeb049e23933da839b' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:01:46.193] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:01:47.409] [INFO] default - saving endpoints
+[2024-10-23T11:01:47.422] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718bb7b5f39966e2d8c7728', '1': '6718bb7b5f39966e2d8c7729' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:03:30.321] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:03:31.482] [INFO] default - saving endpoints
+[2024-10-23T11:03:31.492] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718bbe3cd7d2c43eb802d36', '1': '6718bbe3cd7d2c43eb802d37' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:04:13.045] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:04:14.510] [INFO] default - saving endpoints
+[2024-10-23T11:04:14.521] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718bc0ef66d3c2c17fa0e61', '1': '6718bc0ef66d3c2c17fa0e62' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:04:37.112] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:04:38.009] [INFO] default - saving endpoints
+[2024-10-23T11:04:38.019] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718bc2696e39332536df73d', '1': '6718bc2696e39332536df73e' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:05:31.402] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:06:59.893] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:07:00.866] [INFO] default - saving endpoints
+[2024-10-23T11:07:00.877] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718bcb416d2bd42f79e075b', '1': '6718bcb416d2bd42f79e075c' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:07:48.832] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:07:49.897] [INFO] default - saving endpoints
+[2024-10-23T11:07:49.908] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718bce5a76ac73fa3f83a5f', '1': '6718bce5a76ac73fa3f83a60' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:10:09.879] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:10:11.305] [INFO] default - saving endpoints
+[2024-10-23T11:10:11.315] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718bd73017cfa29b73cf886', '1': '6718bd73017cfa29b73cf887' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:10:32.600] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:10:34.883] [DEBUG] Apis - Get apis 
+[2024-10-23T11:32:36.543] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:32:44.884] [INFO] default - saving endpoints
+[2024-10-23T11:32:44.896] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718c2bc2ac4c422ef27663c', '1': '6718c2bc2ac4c422ef27663d' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:42:31.954] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:42:32.988] [INFO] default - saving endpoints
+[2024-10-23T11:42:32.997] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718c5084f0a3f1b7f3dfede', '1': '6718c5084f0a3f1b7f3dfedf' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:43:19.208] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:43:19.998] [INFO] default - saving endpoints
+[2024-10-23T11:43:20.007] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718c5381ef1ebf132fdf2db', '1': '6718c5381ef1ebf132fdf2dc' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T11:43:29.937] [INFO] default - Server started on PORT:9802
+[2024-10-23T11:43:30.966] [INFO] default - saving endpoints
+[2024-10-23T11:43:30.976] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718c542e654a24b5b237b7f', '1': '6718c542e654a24b5b237b80' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:12:29.708] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:12:30.807] [INFO] default - saving endpoints
+[2024-10-23T14:12:30.817] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718e82ead6553495b6db525', '1': '6718e82ead6553495b6db526' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:14:13.317] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:14:53.325] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:14:55.887] [INFO] default - saving endpoints
+[2024-10-23T14:14:55.897] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718e8bf91abd460977e5afc', '1': '6718e8bf91abd460977e5afd' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:15:56.878] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:15:58.781] [INFO] default - saving endpoints
+[2024-10-23T14:15:58.792] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718e8fea0a9f92323e73b37', '1': '6718e8fea0a9f92323e73b38' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:17:22.395] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:17:23.565] [DEBUG] Apis - Get apis 
+[2024-10-23T14:19:06.836] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:19:28.266] [DEBUG] Apis - Get api 607968112bb23f87d8e31cbb
+[2024-10-23T14:19:41.536] [DEBUG] Apis - Get api 607968112bb23f87d8e31cbb
+[2024-10-23T14:19:46.831] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:19:49.330] [DEBUG] Apis - Get api 607968112bb23f87d8e31cbb
+[2024-10-23T14:20:09.885] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:20:10.920] [DEBUG] Apis - Get api 607968112bb23f87d8e31cbb
+[2024-10-23T14:21:35.906] [DEBUG] Apis - Get api 607968112bb23f87d8e31cbb endpoints
+[2024-10-23T14:21:49.814] [DEBUG] Apis - Get api 6718b957874d2029637d2d21 endpoints
+[2024-10-23T14:23:36.838] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:23:39.494] [DEBUG] Apis - Get api 6718b957874d2029637d2d21 endpoints
+[2024-10-23T14:24:49.931] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:24:52.285] [DEBUG] Apis - Get api 6718b957874d2029637d2d21 endpoints
+[2024-10-23T14:27:24.853] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:27:28.275] [INFO] default - saving endpoints
+[2024-10-23T14:27:28.284] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718ebb0382f1b633b89b401', '1': '6718ebb0382f1b633b89b402' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:27:28.285] [DEBUG] default - ***************
+[2024-10-23T14:28:05.079] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:28:05.850] [INFO] default - saving endpoints
+[2024-10-23T14:28:05.861] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718ebd5d2dc39145b965b65', '1': '6718ebd5d2dc39145b965b66' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:28:05.862] [DEBUG] default - ***************
+[2024-10-23T14:28:46.914] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:28:47.724] [INFO] default - saving endpoints
+[2024-10-23T14:28:47.735] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718ebfff23902a76edbbbc9', '1': '6718ebfff23902a76edbbbca' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:28:47.735] [DEBUG] default - ***************
+[2024-10-23T14:31:30.561] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:31:31.665] [INFO] default - saving endpoints
+[2024-10-23T14:31:31.676] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718eca386e6763c7f400d2e', '1': '6718eca386e6763c7f400d2f' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:31:31.677] [DEBUG] default - ***************
+[2024-10-23T14:32:09.243] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:32:10.134] [INFO] default - saving endpoints
+[2024-10-23T14:32:10.144] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718eccab26a2c64db747916', '1': '6718eccab26a2c64db747917' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:32:10.145] [DEBUG] default - ***************
+[2024-10-23T14:34:31.316] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:34:35.064] [INFO] default - saving endpoints
+[2024-10-23T14:34:35.075] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718ed5bbd0ac7ef7e5af258', '1': '6718ed5bbd0ac7ef7e5af259' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:34:35.076] [DEBUG] default - ***************
+[2024-10-23T14:35:03.267] [INFO] default - saving endpoints
+[2024-10-23T14:35:03.276] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': '6718ed77bd0ac7ef7e5af25b', '1': '6718ed77bd0ac7ef7e5af25c' },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:35:03.277] [DEBUG] default - ***************
+[2024-10-23T14:37:16.992] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:37:19.131] [INFO] default - saving endpoints
+[2024-10-23T14:37:19.140] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': 6718edff767b1b33b3458d40, '1': 6718edff767b1b33b3458d41 },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:37:19.141] [DEBUG] default - ***************
+[2024-10-23T14:39:43.769] [INFO] default - saving endpoints
+[2024-10-23T14:39:43.779] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': 6718ee8f767b1b33b3458d43, '1': 6718ee8f767b1b33b3458d44 },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:39:43.780] [DEBUG] default - ***************
+[2024-10-23T14:40:00.918] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:40:02.188] [INFO] default - saving endpoints
+[2024-10-23T14:40:02.223] [DEBUG] default - BulkWriteResult {
+  result: {
+    ok: 1,
+    writeErrors: [],
+    writeConcernErrors: [],
+    insertedIds: [],
+    nInserted: 0,
+    nUpserted: 2,
+    nMatched: 0,
+    nModified: 0,
+    nRemoved: 0,
+    upserted: [ [Object], [Object] ]
+  },
+  insertedCount: 0,
+  matchedCount: 0,
+  modifiedCount: 0,
+  deletedCount: 0,
+  upsertedCount: 2,
+  upsertedIds: { '0': 6718eea2b7bf3318b34e5051, '1': 6718eea2b7bf3318b34e5052 },
+  insertedIds: {},
+  n: 0
+}
+[2024-10-23T14:40:02.224] [DEBUG] default - ***************
+[2024-10-23T14:40:32.211] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:40:34.174] [INFO] default - saving endpoints
+[2024-10-23T14:41:03.233] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:41:04.941] [INFO] default - saving endpoints
+[2024-10-23T14:42:37.101] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:42:38.039] [INFO] default - saving endpoints
+[2024-10-23T14:44:02.095] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:44:03.241] [INFO] default - saving endpoints
+[2024-10-23T14:48:02.742] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:48:04.540] [INFO] default - saving endpoints
+[2024-10-23T14:49:05.838] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:49:07.560] [INFO] default - saving endpoints
+[2024-10-23T14:50:54.536] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:51:11.038] [INFO] default - saving endpoints
+[2024-10-23T14:53:11.760] [INFO] default - saving endpoints
+[2024-10-23T14:55:18.974] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:55:27.321] [INFO] default - saving endpoints
+[2024-10-23T14:56:10.693] [INFO] default - saving endpoints
+[2024-10-23T14:56:56.924] [INFO] default - Server started on PORT:9802
+[2024-10-23T14:57:01.460] [INFO] default - saving endpoints
+[2024-10-23T15:11:35.933] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:12:03.613] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:12:16.880] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:12:42.255] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:13:53.522] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:17:35.044] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:18:00.998] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:19:15.742] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:20:03.222] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:21:41.237] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:22:09.135] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:22:56.929] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:28:21.847] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:30:00.668] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:32:43.029] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:33:19.575] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:33:42.393] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:35:10.297] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:35:36.336] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:36:16.422] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:36:34.879] [INFO] default - saving endpoints
+[2024-10-23T15:37:20.307] [INFO] default - saving endpoints
+[2024-10-23T15:37:36.247] [INFO] default - saving endpoints
+[2024-10-23T15:38:04.590] [INFO] default - saving endpoints
+[2024-10-23T15:38:48.373] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:39:24.896] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:39:34.616] [INFO] default - saving endpoints
+[2024-10-23T15:39:40.458] [INFO] default - saving endpoints
+[2024-10-23T15:44:24.170] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:44:34.803] [INFO] default - saving endpoints
+[2024-10-23T15:44:42.245] [INFO] default - saving endpoints
+[2024-10-23T15:45:56.931] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:46:03.320] [INFO] default - saving endpoints
+[2024-10-23T15:46:07.542] [INFO] default - saving endpoints
+[2024-10-23T15:47:04.830] [INFO] default - saving endpoints
+[2024-10-23T15:47:21.264] [INFO] default - saving endpoints
+[2024-10-23T15:47:45.833] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:49:00.524] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:49:22.302] [INFO] default - saving endpoints
+[2024-10-23T15:49:39.116] [INFO] default - saving endpoints
+[2024-10-23T15:49:55.187] [INFO] default - saving endpoints
+[2024-10-23T15:50:59.409] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:51:03.371] [INFO] default - saving endpoints
+[2024-10-23T15:53:47.331] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:53:48.227] [DEBUG] Apis - Get apis 
+[2024-10-23T15:54:06.183] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:54:06.645] [DEBUG] Apis - Get apis 
+[2024-10-23T15:55:12.321] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:55:13.318] [DEBUG] Apis - Get apis 
+[2024-10-23T15:55:18.502] [INFO] default - saving endpoints
+[2024-10-23T15:55:20.239] [DEBUG] Apis - Get api 607968112bb23f87d8e31cbb
+[2024-10-23T15:55:40.200] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:55:41.659] [DEBUG] Apis - Get apis 
+[2024-10-23T15:58:03.428] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:58:04.219] [DEBUG] Apis - Get apis 
+[2024-10-23T15:58:15.000] [DEBUG] Apis - Get apis 
+[2024-10-23T15:58:33.903] [DEBUG] Apis - Get apis 
+[2024-10-23T15:59:43.648] [INFO] default - Server started on PORT:9802
+[2024-10-23T15:59:44.210] [DEBUG] Apis - Get apis 
+[2024-10-23T15:59:52.262] [DEBUG] Apis - Get apis 
+[2024-10-23T16:00:28.722] [INFO] default - Server started on PORT:9802
+[2024-10-23T16:00:34.297] [DEBUG] Apis - Get apis 
+[2024-10-23T16:01:25.497] [INFO] default - Server started on PORT:9802
+[2024-10-23T16:01:25.839] [DEBUG] Apis - Get apis 
+[2024-10-23T16:01:53.905] [INFO] default - Server started on PORT:9802
+[2024-10-23T16:01:54.892] [DEBUG] Apis - Get apis 
+[2024-10-23T16:03:02.433] [INFO] default - Server started on PORT:9802
+[2024-10-23T16:03:08.866] [DEBUG] Apis - Get api 67190046fb3c81a23fc5c2f9
+[2024-10-23T16:03:27.360] [INFO] default - Server started on PORT:9802
+[2024-10-23T16:03:27.800] [DEBUG] Apis - Get api 67190046fb3c81a23fc5c2f9
+[2024-10-23T16:03:59.756] [INFO] default - Server started on PORT:9802
+[2024-10-23T16:04:00.078] [DEBUG] Apis - Get api 67190046fb3c81a23fc5c2f9
+[2024-10-23T16:04:09.011] [DEBUG] Apis - Get api 67190046fb3c81a23fc5c2f9
+[2024-10-23T16:04:47.013] [INFO] default - Server started on PORT:9802
+[2024-10-23T16:04:47.748] [DEBUG] Apis - Get api 67190046fb3c81a23fc5c2f9
+[2024-10-23T16:06:22.891] [INFO] default - Server started on PORT:9802
+[2024-10-23T16:06:25.183] [DEBUG] Apis - Get api 67190046fb3c81a23fc5c2f9 endpoints
+[2024-10-23T16:06:38.349] [INFO] default - Server started on PORT:9802
+[2024-10-23T16:06:38.576] [DEBUG] Apis - Get api 67190046fb3c81a23fc5c2f9 endpoints

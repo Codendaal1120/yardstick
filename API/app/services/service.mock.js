@@ -2,7 +2,7 @@ var log4js = require("log4js");
 
 var logger = log4js.getLogger("Mock");
 
-var apService = require("../services/service.apis");
+var apService = require("./service.api");
 var epService = require("../services/service.endpoints");
 
 /*********************************** Notes ***********************************

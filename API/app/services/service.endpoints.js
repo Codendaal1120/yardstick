@@ -3,6 +3,10 @@ var logger = require("../logger.js");
 
 const collection = "endpoints";
 
+/*********************************** Notes ***********************************
+ * -->  Varible pattern = 
+ ******************************************************************************/
+
 var getAll = function(apiId, callack) {
     data.getMany(collection, { "apiId" : apiId }, {}, function(docs){
         var returnList = [];
@@ -22,14 +26,14 @@ var getAll = function(apiId, callack) {
 async function getByApiId(apiId){
     let response = await data.getManyAsync(collection, { "apiId" : apiId });
 
-    if (response.success) 
-    {
-        var returnList = [];
-        while ((document = await response.payload.next())) {
-            returnList.push(toApiObject(document));
-        }               
-        return { success : true, payload : returnList };
-    }
+    // if (response.success) 
+    // {
+    //     // var returnList = [];
+    //     // while ((document = await response.payload.next())) {
+    //     //     returnList.push(document);
+    //     // }               
+    //     return { success : true, payload : returnList };
+    // }
     
     return response;
 }
@@ -46,7 +50,7 @@ var deleteOne = function(apiId, endpointId, callack) {
     });
 }
 
-async function saveOne (api, endpoint) {
+async function saveEndpoint(api, endpoint) {
 
     if (!api){
         return { success : false, error : "Invalid api supplied" };
@@ -85,6 +89,64 @@ async function saveOne (api, endpoint) {
     return { success : true, payload : toApiObject(res.payload) };
 }
 
+/** Deletes all endpoints for the given apiId */
+async function  deleteEndpoints(apiId) {
+    let response = await data.deleteManyAsync(collection, { "apiId" : apiId });
+    return response;
+}
+
+async function  deleteEndpoint(epId) {
+    let response = await data.deleteManyAsync(collection, { "apiId" : apiId });
+    return response;
+}
+    
+var deleteOne = function(apiId, endpointId, callack) {
+    data.deleteOne(collection, { "_id" : data.createId(endpointId) , "apiId" : apiId }, function(doc){
+        callack({ success : true, payload : toApiObject(doc), });
+        return;
+    },
+    function (error){
+        logger.error("Could not delete endpoint : " + error);
+        callack({ success : false, error : error, });
+        return;
+    });
+}
+
+async function saveEndpoints (api, endpoints) {
+    logger.info("saving endpoints");
+    if (!api){
+        return { success : false, error : "Invalid api id" };
+    }
+
+    if (!endpoints || endpoints.length < 1){
+        return { success : false, error : "Invalid endpoints supplied" };
+    }
+
+    endpoints.forEach(ep => {
+        ep.apiId = api.id;
+        var pattern = generatePatterns(api, ep);
+        ep.variablePattern = pattern.variable;
+        ep.pathPattern = pattern.path;
+
+    });
+
+    var res = await data.upsertManyAsync(collection, endpoints);
+
+    if (!res.success){
+        return { success : false, error : res.error };
+    }
+
+    var returnList = [];
+    for(const doc of res.payload) {
+        returnList.push(toApiObject(doc));
+    }
+    
+    return { success : true, payload : returnList };
+}
+
+/**
+ * Extracts the regex from the logic fields
+ */
 function generatePatterns(api, endpoint){
 
     // variable pattern :([^\/]+) <--> use on /myapp/user/:username/profile/:profileId
@@ -124,10 +186,10 @@ function generatePatterns(api, endpoint){
     }
 
     if (pattern.path){
-        pattern.path = "\/mock\/" + api.uniqueName + "\/" + pattern.path + "$";
+        pattern.path = "\/mock\/" + api.path + "\/" + pattern.path + "$";
     }
     else{
-        pattern.path = "\/mock\/" + api.uniqueName;
+        pattern.path = "\/mock\/" + api.path;
     }
 
     if (hasQueryVar || hasPathVar){
@@ -140,7 +202,7 @@ function generatePatterns(api, endpoint){
 function toApiObject(input){
     if (input){
         var output = {
-            "id" : input._id.toString(),
+            "id" : input.id,
             "apiId" : input.apiId,
             "pathPattern" : input.pathPattern,
             "variablePattern" : input.variablePattern,
@@ -185,6 +247,8 @@ module.exports.generatePatterns = generatePatterns;
 
 module.exports.getAll = getAll;
 module.exports.getByApiId = getByApiId;
-
-module.exports.saveOne = saveOne;
+module.exports.saveEndpoint = saveEndpoint;
+module.exports.saveEndpoints = saveEndpoints;
 module.exports.deleteOne = deleteOne;
+module.exports.deleteEndpoints = deleteEndpoints;
+module.exports.deleteEndpoint = deleteEndpoint;

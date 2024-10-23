@@ -8,54 +8,18 @@ var createId = function(inputId) {
     return new mongo.ObjectID(inputId);    
 }
 
-var getMany = function(collectionName, filter, project, successCallback, failureCallback) {    
-
-    if (!filter){
-        filter = {};
-    }
-
-    MongoClient.connect(process.env.dbConnection, { useUnifiedTopology: true }, function(err, client) {
-      
-        if (err){ failureCallback(err); }
-
-        const db = client.db(process.env.dbName);
-        const collection = db.collection(collectionName);
-
-        if (!project){
-            project = {};
-        }       
-
-        collection.find(filter).project(project).toArray(function(err, docs) {   
-            if (err){
-                failureCallback(err);
-            }
-            else{
-                successCallback(docs);
-            }            
-        });
-    });
-}
-
 async function getOneAsync(collectionName, filter, project) {
-
-    const client = await MongoClient.connect(process.env.dbConnection, { useUnifiedTopology: true })
-        .catch(err => { return { success : false, error : err.message } });
-
-    if (!client) {
-        return { success : false, error : "Could not create db client" };
-    }
 
     try {
 
-        const db = client.db(process.env.dbName);
-        let collection = db.collection(collectionName);
+        let collection = await getCollection(collectionName);
 
         if (!project){
             project = {};
         }  
 
         let res = await collection.findOne(filter, project);
-        return { success : true, payload : res };
+        return { success : true, payload : setObjectId(res) };
     } 
     catch (err) {
         return { success : false, error : err.message };
@@ -64,43 +28,37 @@ async function getOneAsync(collectionName, filter, project) {
 
 async function getManyAsync(collectionName, filter, project) {
 
-    const client = await MongoClient.connect(process.env.dbConnection, { useUnifiedTopology: true })
-        .catch(err => { return { success : false, error : err.message } });
-
-    if (!client) {
-        return { success : false, error : "Could not create db client" };
-    }
-
     try {
 
-        const db = client.db(process.env.dbName);
-        let collection = db.collection(collectionName);
+        let collection = await getCollection(collectionName);
 
         if (!project){
             project = {};
         }  
 
-        let res = await collection.find(filter, project);
-        return { success : true, payload : res };
+        let returnList = await getManyAsyncInternal(collection, filter, project);
+       
+        return { success : true, payload : returnList };
     } 
     catch (err) {
         return { success : false, error : err.message };
     }
 }
 
+async function getManyAsyncInternal(collection, filter, project) {
+    let returnList = [];
+    let res = await collection.find(filter, project);
+    while ((doc = await res.next())) {
+        returnList.push(setObjectId(doc));
+    }   
+    return returnList;    
+}
+
 async function insertOneAsync(collectionName, document, project) {
-
-    const client = await MongoClient.connect(process.env.dbConnection, { useUnifiedTopology: true })
-        .catch(err => { return { success : false, error : err.message } });
-
-    if (!client) {
-        return { success : false, error : "Could not create db client" };
-    }
 
     try {
 
-        const db = client.db(process.env.dbName);
-        let collection = db.collection(collectionName);
+        let collection = await getCollection(collectionName);
 
         if (!project){
             project = {};
@@ -108,7 +66,7 @@ async function insertOneAsync(collectionName, document, project) {
 
         let res = await collection.insertOne(document);
         if (res.insertedCount == 1){
-            return { success : true, payload : document };
+            return { success : true, payload : setObjectId(document) };
         }
         else{
             return { success : false, error : "Could not insert" };
@@ -119,19 +77,70 @@ async function insertOneAsync(collectionName, document, project) {
     }
 }
 
-async function replaceOneAsync(collectionName, document, project) {
-
-    const client = await MongoClient.connect(process.env.dbConnection, { useUnifiedTopology: true })
-        .catch(err => { return { success : false, error : err.message } });
-
-    if (!client) {
-        return { success : false, error : "Could not create db client" };
-    }
+async function updateOneAsync(collectionName, document, project) {
 
     try {
 
-        const db = client.db(process.env.dbName);
-        let collection = db.collection(collectionName);
+        let collection = await getCollection(collectionName);
+
+        if (!project){
+            project = {};
+        }  
+
+        let id = createId(document.id) ?? genrateObjectId();
+        let res = await collection.findOneAndUpdate(
+            { _id: id }, 
+            { $set: document }, 
+            { upsert : false, returnOriginal: false, returnDocument	:'after'});
+
+        if (res.lastErrorObject.updatedExisting  === false ){
+            return { success : false, error : `Api with id '${document.id}' not found` };
+        }
+
+        if (res.ok == 1){
+            return { success : true, payload : setObjectId(res.value) };
+        }
+        else{
+            return { success : false, error : "Could not update" };
+        }
+    } 
+    catch (err) {
+        return { success : false, error : err.message };
+    }
+}
+
+async function upsertOneAsync(collectionName, document, project) {
+
+    try {
+
+        let collection = await getCollection(collectionName);
+
+        if (!project){
+            project = {};
+        }  
+        let id = createId(document.id) ?? genrateObjectId();
+        let res = await collection.findOneAndUpdate(
+            { _id: id }, 
+            { $set: document }, 
+            { upsert : true, returnOriginal: false, returnDocument	:'after'});
+
+        if (res.ok == 1){
+            return { success : true, payload : setObjectId(res.value) };
+        }
+        else{
+            return { success : false, error : "Could not upsert" };
+        }
+    } 
+    catch (err) {
+        return { success : false, error : err.message };
+    }
+}
+
+async function replaceOneAsync(collectionName, document, project) {
+
+    try {
+
+        let collection = await getCollection(collectionName);
 
         if (!project){
             project = {};
@@ -148,6 +157,81 @@ async function replaceOneAsync(collectionName, document, project) {
     catch (err) {
         return { success : false, error : err.message };
     }
+}
+
+async function upsertManyAsync(collectionName, documents, project) {
+
+    try {
+        let collection = await getCollection(collectionName);
+
+        if (!project){
+            project = {};
+        }  
+
+        let res = await collection.bulkWrite(
+            documents.map(d => { 
+                return { updateOne:
+                  {
+                    filter: { _id: d.id ?? genrateObjectId() },
+                    update: { $set: d },
+                    upsert : true
+                  }
+                }
+              }
+            ),
+            { ordered : false }
+        );
+
+        //logger.debug(res);
+        //logger.debug('***************');
+
+        if (res.modifiedCount + res.insertedCount + res.upsertedCount == documents.length){
+            let savedEndpoints = await getManyAsyncInternal(collection, { _id : { $in : Object.values(res.upsertedIds).map(i => createId(i)) } }, project);
+            return { success : true, payload : savedEndpoints };
+        }
+        else{
+            logger.error(res);
+            return { success : false, error : "Could not upsert all documents" };
+        }
+    } 
+    catch (err) {
+        return { success : false, error : err.message };
+    }
+}
+
+async function deleteOneAsync(collectionName, filter) {
+    try{
+        let collection = await getCollection(collectionName);
+        await collection.deleteOne(filter);
+        return { success : true };
+    }
+    catch (err) {
+        return { success : false, error : err.message };
+    }
+}
+
+async function deleteManyAsync(collectionName, filter) {
+    try{
+        let collection = await getCollection(collectionName);
+        await collection.deleteMany(filter);
+        return { success : true };
+    }
+    catch (err) {
+        return { success : false, error : err.message };
+    }
+}
+
+async function getCollection(collectionName) {
+
+    const client = await MongoClient.connect(process.env.dbConnection, { useUnifiedTopology: true })
+    .catch(err => { return { success : false, error : err.message } });
+
+    if (!client) {
+        throw new Error("Could not create db client");
+    }
+
+    const db = client.db(process.env.dbName);
+    return db.collection(collectionName);
 }
 
 var insertOne = function(collectionName, document, project, successCallback, failureCallback) {    
@@ -261,30 +345,32 @@ var deleteOne = function(collectionName, filter, successCallback, failureCallbac
     });
 }
 
-var insertMany = function(collectionName, successCallback, failureCallback) {    
+function setObjectId(obj){
+    if (obj){
+        delete obj.id;
+        obj = {'id':obj._id.toString() , ...obj};
+        delete obj._id;        
+    }  
+    return obj;  
+}
 
-    MongoClient.connect(process.env.dbConnection, function(err, client) {
-      
-        const db = client.db(process.env.dbName);
-        const collection = db.collection(collectionName);
-
-        collection.insertMany([{ a: 1 }, { a: 2 }, { a: 3 }], function(err, result) {
-           
-            console.log('Inserted 3 documents into the collection');
-            callback(result);
-            return;
-          });
-        
-    });
+/**
+ * Generates a new unique id 
+ * @see https://mongodb.github.io/node-mongodb-native/api-bson-generated/objectid.html
+ */
+function genrateObjectId(){
+    var timestamp = Math.floor(new Date().getTime()/1000);
+    var objectId = new mongo.ObjectId(timestamp);
+    return objectId;
 }
 
 module.exports.createId = createId;
-
-module.exports.getMany = getMany;
 module.exports.getOneAsync = getOneAsync;
 module.exports.getManyAsync = getManyAsync;
-module.exports.insertOne = insertOne;
 module.exports.insertOneAsync = insertOneAsync;
 module.exports.replaceOneAsync = replaceOneAsync;
-module.exports.replaceOne = replaceOne;
-module.exports.deleteOne = deleteOne;
+module.exports.upsertManyAsync = upsertManyAsync;
+module.exports.deleteManyAsync = deleteManyAsync;
+module.exports.deleteOneAsync = deleteOneAsync;
+//module.exports.upsertOneAsync = upsertOneAsync;
+module.exports.updateOneAsync = updateOneAsync;
