@@ -10,3 +10,4 @@ api/node_modules/*
 ui/node_modules/*
 API/.env
 TODO.md
+*.log
